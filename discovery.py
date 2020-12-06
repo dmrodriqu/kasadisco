@@ -55,10 +55,8 @@ if __name__ == "__main__":
                 changed = True
 
     initialstates = {x:devicedic[x].is_on for x in devicedic}
-    i = 0
     while True:
         listen(initialstates)
         discomode(devicedic)
         setState(devicedic, initialstates)
-        i+=1
 
